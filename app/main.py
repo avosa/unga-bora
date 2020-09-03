@@ -13,8 +13,10 @@ def index():
 
 @app.route("/about")
 def about():
+    script_dir = os.path.dirname(__file__)
+    file_path = os.path.join(script_dir, 'data/company.json')
     data = []
-    with open("data/company.json", "r") as json_data:
+    with open(file_path, "r") as json_data:
         data = json.load(json_data)
     return render_template("about.html", page_title="About", company=data)
 
