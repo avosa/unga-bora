@@ -14,7 +14,7 @@ def index():
 @app.route("/about")
 def about():
     script_dir = os.path.dirname(__file__)
-    file_path = os.path.join(script_dir, 'data/company.json')
+    file_path = os.path.join(script_dir, "data/company.json")
     data = []
     with open(file_path, "r") as json_data:
         data = json.load(json_data)
@@ -23,9 +23,11 @@ def about():
 
 @app.route("/about/<member_name>")
 def about_member(member_name):
+    script_dir = os.path.dirname(__file__)
+    file_path = os.path.join(script_dir, "data/company.json")
     member = {}
 
-    with open("data/company.json", "r") as json_data:
+    with open(file_path, "r") as json_data:
         data = json.load(json_data)
         for obj in data:
             if obj["url"] == member_name:
