@@ -100,14 +100,7 @@
                   </span>
                 </a>
               </li>
-              <li class="list-inline-item">
-                <a href="{{ url_for('contact') }}">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x">Contact</i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
+
               <li class="list-inline-item">
                 <a href="{{ url_for('about') }}">
                   <span class="fa-stack fa-lg">
@@ -116,6 +109,16 @@
                   </span>
                 </a>
               </li>
+
+              <li class="list-inline-item">
+                <a href="{{ url_for('contact') }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x">Contact</i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+
               <li class="list-inline-item">
                 <a href="{{ url_for('careers') }}">
                   <span class="fa-stack fa-lg">
@@ -125,7 +128,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="{{ url_for('news') }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x">News</i>
                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
